@@ -1,0 +1,555 @@
+<html>
+
+<head>
+    <title>Hello World</title>
+    <style>
+        body {
+            background-color: #e8eaed;
+            color: #000;
+            font-family: "Cabin", sans-serif;
+            font-size: 18.5px !important;
+            line-height: 1.5;
+            text-rendering: optimizelegibility;
+        }
+
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        a:hover {
+            border-bottom: 4px solid #ce5b4c;
+            cursor: pointer;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        nav {
+            background-color: #1a73e8;
+            border-bottom: 2px solid #0d314a;
+            color: #fff;
+            height: 72px;
+            line-height: 72px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 25px 0 10px;
+        }
+
+        nav a {
+            font-family: "Roboto", sans-serif;
+            flex-direction: column;
+            color: #fff;
+            font-weight: bold;
+            font-size: 20px;
+            text-decoration: none;
+            line-height: 70px;
+        }
+
+        nav a:hover {
+            color: #fff;
+            border-bottom: 5px solid #fff;
+        }
+
+        .note {
+            background: #eee;
+            border-left: 3px solid #f8ce5e;
+            margin: 25px 0;
+            padding: 24px 32px;
+        }
+
+        #main,
+        #footer {
+            background: #fff;
+            border-top: 2px solid #cf5d4e;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+                rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+            padding: 30px;
+            max-width: 1200px;
+            margin: 50px auto;
+        }
+
+        blockquote {
+            background: #f9f9f9;
+            border-left: 10px solid #ccc;
+            margin: 1.5em 10px;
+            padding: 0.5em 10px;
+            quotes: "\201C" "\201D" "\2018" "\2019";
+        }
+
+        blockquote:before {
+            color: #ccc;
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+
+        blockquote p {
+            display: inline;
+        }
+
+        /* CSS RESET */
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block;
+        }
+
+        blockquote,
+        q {
+            quotes: none;
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: "";
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        /*! Typebase.less v0.1.0 | MIT License */
+        /* Setup */
+        html {
+            /* Change default typefaces here */
+            font-family: serif;
+            font-size: 137.5%;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Copy & Lists */
+        p {
+            line-height: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+        }
+
+        ol,
+        ul {
+            padding-left: 2rem;
+        }
+
+        ol,
+        ul,
+        dl {
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        ol ol,
+        ul ul,
+        ol ul,
+        ul ol {
+            margin-bottom: 0;
+        }
+
+        blockquote {
+            background: rgba(165, 165, 165, 0.15);
+            border-left: 10px solid#dcdcdc;
+            border-left: 10px solid rgb(192.5, 192.5, 192.5);
+            margin: 1.618em 0.618rem;
+            /* Comment-A */
+            padding: 0.618em 0.618rem;
+            quotes: "\201C" "\201D" "\2018" "\2019";
+        }
+
+        blockquote::before {
+            color: #c1c1c1;
+            color: rgb(192.5, 192.5, 192.5);
+            content: open-quote;
+            font-size: 4em;
+            line-height: 0.1em;
+            margin-right: 0.25em;
+            vertical-align: -0.4em;
+        }
+
+        /* Headings */
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            /* Change heading typefaces here */
+            font-family: sans-serif;
+            margin-top: 1.5rem;
+            margin-bottom: 8px;
+            line-height: 1.5rem;
+        }
+
+        h1 {
+            font-size: 40px;
+            line-height: 48px;
+        }
+
+        h2 {
+            font-size: 32px;
+            line-height: 38.4px;
+        }
+
+        h3 {
+            font-size: 28px;
+            line-height: 33.6px;
+        }
+
+        h4 {
+            font-size: 24px;
+            line-height: 28.8px;
+        }
+
+        h5 {
+            font-size: 20px;
+            line-height: 24px;
+        }
+
+        /* Tables */
+        table {
+            margin-top: 1.5rem;
+            border-spacing: 0px;
+            border-collapse: collapse;
+        }
+
+        table td,
+        table th {
+            padding: 0;
+            line-height: 33px;
+        }
+
+        /* Code blocks */
+        code {
+            vertical-align: bottom;
+        }
+
+        code[class*="language-"],
+        pre[class*="language-"] {
+            color: black;
+            background: none;
+            text-shadow: 0 1px white;
+            font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+            font-size: 1em;
+            text-align: left;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+            line-height: 1.5;
+
+            -moz-tab-size: 4;
+            -o-tab-size: 4;
+            tab-size: 4;
+
+            -webkit-hyphens: none;
+            -moz-hyphens: none;
+            -ms-hyphens: none;
+            hyphens: none;
+        }
+
+        pre[class*="language-"]::-moz-selection,
+        pre[class*="language-"] ::-moz-selection,
+        code[class*="language-"]::-moz-selection,
+        code[class*="language-"] ::-moz-selection {
+            text-shadow: none;
+            background: #b3d4fc;
+        }
+
+        pre[class*="language-"]::selection,
+        pre[class*="language-"] ::selection,
+        code[class*="language-"]::selection,
+        code[class*="language-"] ::selection {
+            text-shadow: none;
+            background: #b3d4fc;
+        }
+
+        @media print {
+
+            code[class*="language-"],
+            pre[class*="language-"] {
+                text-shadow: none;
+            }
+        }
+
+        /* Code blocks */
+        pre[class*="language-"] {
+            padding: 1em;
+            margin: 0.5em 0;
+            overflow: auto;
+        }
+
+        :not(pre)>code[class*="language-"],
+        pre[class*="language-"] {
+            background: #f5f2f0;
+        }
+
+        /* Inline code */
+        :not(pre)>code[class*="language-"] {
+            padding: 0.1em;
+            border-radius: 0.3em;
+            white-space: normal;
+        }
+
+        .token.comment,
+        .token.prolog,
+        .token.doctype,
+        .token.cdata {
+            color: slategray;
+        }
+
+        .token.punctuation {
+            color: #999;
+        }
+
+        .token.namespace {
+            opacity: 0.7;
+        }
+
+        .token.property,
+        .token.tag,
+        .token.boolean,
+        .token.number,
+        .token.constant,
+        .token.symbol,
+        .token.deleted {
+            color: #905;
+        }
+
+        .token.selector,
+        .token.attr-name,
+        .token.string,
+        .token.char,
+        .token.builtin,
+        .token.inserted {
+            color: #690;
+        }
+
+        .token.operator,
+        .token.entity,
+        .token.url,
+        .language-css .token.string,
+        .style .token.string {
+            color: #9a6e3a;
+            /* This background color was intended by the author of this theme. */
+            background: hsla(0, 0%, 100%, 0.5);
+        }
+
+        .token.atrule,
+        .token.attr-value,
+        .token.keyword {
+            color: #07a;
+        }
+
+        .token.function,
+        .token.class-name {
+            color: #dd4a68;
+        }
+
+        .token.regex,
+        .token.important,
+        .token.variable {
+            color: #e90;
+        }
+
+        .token.important,
+        .token.bold {
+            font-weight: bold;
+        }
+
+        .token.italic {
+            font-style: italic;
+        }
+
+        .token.entity {
+            cursor: help;
+        }
+    </style>
+    <link rel="stylesheet" href="css/Editing.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&amp;family=Roboto:wght@700&amp;display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <article id="main">
+        <div>
+            <h1>Exercise 1 - Quick Edits</h1>
+            <p>Fire up the DevTools ( refer to the <a
+                    href="https://developer.chrome.com/docs/devtools">Chrome DevTools</a> ) and complete the following tasks.
+            </p>
+            <ol>
+                <li>Change this list from an ordered list <code>ol</code> to an unordered list <code>ul</code>.</li>
+                <div>
+                <ol>
+                    <li>Debugging with Browser Developer Tools</li>
+                    <li>Using Git and GitHub for Version Control</li>
+                    <li>Automated Testing with DevTools</li>
+                    <li>Performance Optimization with DevTools</li>
+                    <li>Building and Deploying with DevOps Tools</li>
+                </ol>
+                </div>
+                <li>Clicking on <a id="link" href="#">this link</a> makes a popup appear. Can you find the JavaScript
+                    code that calls the <code>alert</code>?</li>
+            </ol>
+            <p>There is a button below. When clicked, it will reveal a <code>blockquote</code>. The
+                <code>blockquote</code> has the following HTML:
+            </p>
+            <pre class=" language-html"><code class=" language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>blockquote</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>quote<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>quote<span class="token punctuation">"</span></span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">background-color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">&gt;</span></span>
+  Did you get it right?
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>blockquote</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+            <p>And the following CSS:</p>
+            <pre class=" language-css"><code class=" language-css"><span class="token selector">blockquote</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.quote</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> orange<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">#quote</span> <span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> yellow <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+            <ol>
+                <li>Can you guess what background color it will have?</li>
+                <li>Can you "cheat" using the DevTools to be 100% sure before you click?</li>
+            </ol>
+            <button id="button">Click here to find out!</button>
+
+            <blockquote class="quote" id="quote" style="background-color: blue; display: none;">
+                Did you get it right?
+            </blockquote>
+
+            <p>There are a bunch of cards! Can you figure out the border color of the one with id
+                <strong>12345678</strong>? Can you do it in a way that would work if there were 1000 cards on the page?
+            </p>
+            <div id="513425" class="card">Apple</div>
+            <div id="873234" class="card">Bird</div>
+            <div id="485073" class="card">Car</div>
+            <div id="182370" class="card">Dove</div>
+            <div id="438975" class="card">Elephant</div>
+            <div id="127369" class="card">Fire</div>
+            <div id="234709" class="card">Goat</div>
+            <div id="983745" class="card">House</div>
+            <div id="320283" class="card">Igloo</div>
+            <div id="089734" class="card">Jack</div>
+            <div id="283740" class="card">Kite</div>
+            <div id="346708" class="card">Lion</div>
+            <div id="12345678" class="card">Monkey</div>
+            <div id="210387" class="card">Nest</div>
+        </div>
+    </article>
+    <script src="./js/Editing.js"></script>
+</body>
+
+</html>
