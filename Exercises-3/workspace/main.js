@@ -22,6 +22,7 @@ function render() {
 form.addEventListener("keyup", (evt) => {
   if (evt.key === "Enter") {
     console.log(form.value);
+    // items.push(form.value);  //here it is
     // Now add the item to the list!
     render();
   }
